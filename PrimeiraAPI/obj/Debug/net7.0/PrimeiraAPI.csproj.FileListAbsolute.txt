@@ -31,3 +31,8 @@ C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\o
 C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\obj\Debug\net7.0\PrimeiraAPI.pdb
 C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\obj\Debug\net7.0\PrimeiraAPI.genruntimeconfig.cache
 C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\obj\Debug\net7.0\ref\PrimeiraAPI.dll
+C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\bin\Debug\net7.0\Npgsql.dll
+C:\Users\Gabriel\Desktop\Programação\C#\Projetos\API\PrimeiraAPI\PrimeiraAPI\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
