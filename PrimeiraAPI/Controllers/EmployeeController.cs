@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PrimeiraAPI.Application.ViewModel;
+using PrimeiraAPI.Domain.DTOs;
 using PrimeiraAPI.Domain.Model;
 
 namespace PrimeiraAPI.Controllers
@@ -12,16 +14,18 @@ namespace PrimeiraAPI.Controllers
 
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger<EmployeeController> _logger;
+        private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger)
+        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger, IMapper mapper)
         {
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult Add([FromForm]EmployeeViewModel employeeView)
+        public IActionResult Add([FromForm] EmployeeViewModel employeeView)
         {
             var filePath = Path.Combine("Storage", employeeView.Photo.FileName);
 
@@ -38,7 +42,7 @@ namespace PrimeiraAPI.Controllers
         [Authorize]
         [HttpPost]
         [Route("{id}/download")]
-        public IActionResult DownloadPhoto(int id) 
+        public IActionResult DownloadPhoto(int id)
         {
             var employee = _employeeRepository.Get(id);
 
@@ -47,17 +51,27 @@ namespace PrimeiraAPI.Controllers
             return File(dataBytes, "image/jpeg");
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet]
-        public IActionResult Get(int pageNumber, int pageQuantity) 
+        public IActionResult Get(int pageNumber, int pageQuantity)
         {
             _logger.Log(LogLevel.Error, "Ocorreu um ERRO");
 
             var employees = _employeeRepository.Get(pageNumber, pageQuantity);
 
-            _logger.LogInformation("Teste"); 
+            _logger.LogInformation("Teste");
 
             return Ok(employees);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult Search(int id)
+        {
+            var employees = _employeeRepository.Get(id);
+            var employeesDTOs = _mapper.Map<EmployeeDTO>(employees);
+
+            return Ok(employeesDTOs);
         }
     }
 }

@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "3BXrG8T9G5zLIL9g9yzLP+TCmJs+ZAg/wvSz2is6sqORbVriK/Y1o3AtWkJCHJS1HDCwWELmRo8BqhVF5wmFeQ==",
+  "dgSpecHash": "aBfUzH2YfnvxcfMqkZtbNYA/1d3+m2IJkwMGHqdFO+7xohsREnkYSQw7i/o4oXyeuvbocxAYnu0Y+Uc50dbbKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel\\Desktop\\Programação\\C#\\Projetos\\API\\PrimeiraAPI\\PrimeiraAPI\\PrimeiraAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gabriel\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.0\\microsoft.aspnetcore.authentication.jwtbearer.7.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
