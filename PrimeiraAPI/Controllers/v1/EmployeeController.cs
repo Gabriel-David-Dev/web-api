@@ -5,10 +5,11 @@ using PrimeiraAPI.Application.ViewModel;
 using PrimeiraAPI.Domain.DTOs;
 using PrimeiraAPI.Domain.Model.EmployeeAggregate;
 
-namespace PrimeiraAPI.Controllers
+namespace PrimeiraAPI.Controllers.v1
 {
     [ApiController]
-    [Route("api/v1/employee")]
+    [Route("api/v{version:apiVersion}/employee")]
+    [ApiVersion("1.0")]
     public class EmployeeController : ControllerBase
     {
 
@@ -51,7 +52,7 @@ namespace PrimeiraAPI.Controllers
             return File(dataBytes, "image/jpeg");
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {
